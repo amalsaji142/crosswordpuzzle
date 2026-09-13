@@ -116,7 +116,7 @@ export function useCrosswordGame() {
   const [showResetModal, setShowResetModal] = useState<boolean>(false);
   const [showVictoryModal, setShowVictoryModal] = useState<boolean>(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
-  const toastTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const toastTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const showToast = useCallback((msg: string) => {
     setToastMessage(msg);
@@ -128,7 +128,7 @@ export function useCrosswordGame() {
 
   // Timer interval
   useEffect(() => {
-    let interval: NodeJS.Timeout | null = null;
+    let interval: ReturnType<typeof setInterval> | null = null;
     if (isTimerRunning && !isCompleted) {
       interval = setInterval(() => {
         setTimerSeconds((prev) => prev + 1);
