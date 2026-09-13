@@ -97,7 +97,7 @@ export const CrosswordGame: React.FC = () => {
       {/* Print Only Header */}
       <div className="print-header">
         <h1>Computer Science & Technology Crossword</h1>
-        <p>Difficulty: Medium &bull; 20 Words (10 Across, 10 Down)</p>
+        <p>Difficulty: Easy &bull; 20 Words (10 Across, 10 Down)</p>
       </div>
 
       {/* App Header */}
@@ -109,7 +109,7 @@ export const CrosswordGame: React.FC = () => {
               <h1>BYTECROSS</h1>
               <div className="badge-group">
                 <span className="badge badge-topic">Computer Science & Tech</span>
-                <span className="badge badge-diff">Medium &bull; 20 Words</span>
+                <span className="badge badge-diff">Easy &bull; 20 Words</span>
               </div>
             </div>
           </div>

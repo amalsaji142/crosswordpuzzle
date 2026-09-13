@@ -91,35 +91,35 @@ python crossword_cli.py
 
 ---
 
-## 📋 Clues & Word Matrix (20 Words)
+## 📋 Clues & Word Matrix (20 Easy Words)
 
 ### ➡️ Across Clues (10 Words)
 | # | Clue | Length | Answer |
 | :-: | :--- | :-: | :--- |
-| **1** | Smallest and fastest memory storage inside the CPU | 8 | `REGISTER` |
-| **5** | Network security barrier monitoring incoming and outgoing traffic | 8 | `FIREWALL` |
-| **6** | High-speed temporary storage layer to reduce memory latency | 5 | `CACHE` |
-| **8** | Algorithm for training neural networks by calculating gradients | 8 | `BACKPROP` |
-| **10** | Structured collection of data organized for efficient retrieval | 8 | `DATABASE` |
-| **15** | Atomic unit created by lexical analysis during code parsing | 5 | `TOKEN` |
-| **17** | Core component of an OS managing system resources and hardware | 6 | `KERNEL` |
-| **18** | Synchronization lock preventing concurrent access to shared resources | 5 | `MUTEX` |
-| **19** | Medium retaining digital information persistently or temporarily | 7 | `STORAGE` |
-| **20** | Variable holding the memory address of another variable | 7 | `POINTER` |
+| **4** | The smallest single point of color on a screen | 5 | `PIXEL` |
+| **6** | A central computer that serves web pages or files to clients | 6 | `SERVER` |
+| **7** | Software like Chrome or Edge used to view websites | 7 | `BROWSER` |
+| **8** | Number system made up of only 0s and 1s | 6 | `BINARY` |
+| **9** | Clickable graphic on a screen that triggers an action | 6 | `BUTTON` |
+| **11** | Popular beginner-friendly programming language named after a comedy group | 6 | `PYTHON` |
+| **14** | A combination of hardware and software working together | 6 | `SYSTEM` |
+| **16** | Information displayed or produced by a computer | 6 | `OUTPUT` |
+| **17** | A website address like google.com or wikipedia.org | 6 | `DOMAIN` |
+| **18** | Sending a file or photo from your device to the internet | 6 | `UPLOAD` |
 
 ### ⬇️ Down Clues (10 Words)
 | # | Clue | Length | Answer |
 | :-: | :--- | :-: | :--- |
-| **2** | Last-In, First-Out (LIFO) linear data structure | 5 | `STACK` |
-| **3** | Structural blueprint and constraint definition of a database | 6 | `SCHEMA` |
-| **4** | Smallest unit of execution managed independently by an OS scheduler | 6 | `THREAD` |
-| **7** | Software endpoint for sending and receiving network traffic | 6 | `SOCKET` |
-| **9** | Formal set of rules governing data communication across networks | 8 | `PROTOCOL` |
-| **11** | Standard technology for wired local area networks | 8 | `ETHERNET` |
-| **12** | Key-value data structure providing average O(1) time complexity | 7 | `HASHMAP` |
-| **13** | Binary data type representing truth values (true/false) | 7 | `BOOLEAN` |
-| **14** | Data structure that speeds up query retrieval in databases | 5 | `INDEX` |
-| **16** | Formatted unit of data routed through a computer network | 6 | `PACKET` |
+| **1** | Organized digital storage of information and records | 8 | `DATABASE` |
+| **2** | Writing instructions in a programming language for a computer to run | 6 | `CODING` |
+| **3** | Restarting a computer to fix glitches or apply updates | 6 | `REBOOT` |
+| **5** | Worldwide network connecting millions of computers together | 8 | `INTERNET` |
+| **6** | Typing a query into Google or a browser to find information | 6 | `SEARCH` |
+| **10** | Online servers where you store data instead of local hard drives | 5 | `CLOUD` |
+| **11** | Secret code used to lock and protect your account | 8 | `PASSWORD` |
+| **12** | A duplicate copy of files saved to prevent data loss | 6 | `BACKUP` |
+| **13** | A portable computer you can carry and use on your lap | 6 | `LAPTOP` |
+| **15** | Electronic mail sent over the internet | 5 | `EMAIL` |
 
 ---
 

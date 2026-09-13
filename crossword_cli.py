@@ -324,30 +324,30 @@ class CrosswordCLI:
 def run_tests():
     cli = CrosswordCLI()
     print("Testing CrosswordCLI headless with hint quotas...")
-    # Solve word 1 across
-    res = cli.solve_word(1, "across", "REGISTER")
+    # Solve word 4 across
+    res = cli.solve_word(4, "across", "PIXEL")
     assert res is True
-    assert cli.is_word_solved(cli.word_map[(1, "across")]) is True
+    assert cli.is_word_solved(cli.word_map[(4, "across")]) is True
 
     # Test Letter hints: exactly 3 available
     assert cli.letter_hints_left == 3
-    assert cli.hint_letter(2, "down") is True # 1st hint used
+    assert cli.hint_letter(1, "down") is True # 1st hint used
     assert cli.letter_hints_left == 2
-    assert cli.hint_letter(2, "down") is True # 2nd hint used
+    assert cli.hint_letter(1, "down") is True # 2nd hint used
     assert cli.letter_hints_left == 1
-    assert cli.hint_letter(2, "down") is True # 3rd hint used
+    assert cli.hint_letter(1, "down") is True # 3rd hint used
     assert cli.letter_hints_left == 0
     # 4th letter hint should be rejected
-    assert cli.hint_letter(2, "down") is False
+    assert cli.hint_letter(1, "down") is False
 
     # Test Word hints: exactly 2 available
     assert cli.word_hints_left == 2
-    assert cli.hint_word(3, "down") is True # 1st word hint used
+    assert cli.hint_word(2, "down") is True # 1st word hint used
     assert cli.word_hints_left == 1
-    assert cli.hint_word(4, "down") is True # 2nd word hint used
+    assert cli.hint_word(3, "down") is True # 2nd word hint used
     assert cli.word_hints_left == 0
     # 3rd word hint should be rejected
-    assert cli.hint_word(5, "across") is False
+    assert cli.hint_word(6, "across") is False
 
     # Test full reveal
     cli.reveal_all()

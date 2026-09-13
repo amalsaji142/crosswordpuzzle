@@ -29,30 +29,30 @@ export interface CellPosition {
 export const PUZZLE_DATA: PuzzleData = {
   title: "Computer Science & Tech Crossword",
   topic: "Computer Science & Technology",
-  difficulty: "Medium",
+  difficulty: "Easy",
   rows: 15,
   cols: 15,
   words: [
-    { number: 1, direction: "across", word: "REGISTER", clue: "Smallest and fastest memory storage inside the CPU", row: 0, col: 6, length: 8 },
-    { number: 2, direction: "down", word: "STACK", clue: "Last-In, First-Out (LIFO) linear data structure", row: 0, col: 10, length: 5 },
-    { number: 3, direction: "down", word: "SCHEMA", clue: "Structural blueprint and constraint definition of a database", row: 2, col: 0, length: 6 },
-    { number: 4, direction: "down", word: "THREAD", clue: "Smallest unit of execution managed independently by an OS scheduler", row: 2, col: 3, length: 6 },
-    { number: 5, direction: "across", word: "FIREWALL", clue: "Network security barrier monitoring incoming and outgoing traffic", row: 2, col: 5, length: 8 },
-    { number: 6, direction: "across", word: "CACHE", clue: "High-speed temporary storage layer to reduce memory latency", row: 3, col: 0, length: 5 },
-    { number: 7, direction: "down", word: "SOCKET", clue: "Software endpoint for sending and receiving network traffic", row: 3, col: 13, length: 6 },
-    { number: 8, direction: "across", word: "BACKPROP", clue: "Algorithm for training neural networks by calculating gradients", row: 4, col: 7, length: 8 },
-    { number: 9, direction: "down", word: "PROTOCOL", clue: "Formal set of rules governing data communication across networks", row: 4, col: 11, length: 8 },
-    { number: 10, direction: "across", word: "DATABASE", clue: "Structured collection of data organized for efficient retrieval", row: 6, col: 2, length: 8 },
-    { number: 11, direction: "down", word: "ETHERNET", clue: "Standard technology for wired local area networks", row: 6, col: 9, length: 8 },
-    { number: 12, direction: "down", word: "HASHMAP", clue: "Key-value data structure providing average O(1) time complexity", row: 8, col: 1, length: 7 },
-    { number: 13, direction: "down", word: "BOOLEAN", clue: "Binary data type representing truth values (true/false)", row: 8, col: 4, length: 7 },
-    { number: 14, direction: "down", word: "INDEX", clue: "Data structure that speeds up query retrieval in databases", row: 8, col: 7, length: 5 },
-    { number: 15, direction: "across", word: "TOKEN", clue: "Atomic unit created by lexical analysis during code parsing", row: 9, col: 3, length: 5 },
-    { number: 16, direction: "down", word: "PACKET", clue: "Formatted unit of data routed through a computer network", row: 9, col: 14, length: 6 },
-    { number: 17, direction: "across", word: "KERNEL", clue: "Core component of an OS managing system resources and hardware", row: 11, col: 6, length: 6 },
-    { number: 18, direction: "across", word: "MUTEX", clue: "Synchronization lock preventing concurrent access to shared resources", row: 12, col: 1, length: 5 },
-    { number: 19, direction: "across", word: "STORAGE", clue: "Medium retaining digital information persistently or temporarily", row: 13, col: 8, length: 7 },
-    { number: 20, direction: "across", word: "POINTER", clue: "Variable holding the memory address of another variable", row: 14, col: 1, length: 7 }
+    { number: 1, direction: "down", word: "DATABASE", clue: "Organized digital storage of information and records", row: 0, col: 0, length: 8 },
+    { number: 2, direction: "down", word: "CODING", clue: "Writing instructions in a programming language for a computer to run", row: 0, col: 2, length: 6 },
+    { number: 3, direction: "down", word: "REBOOT", clue: "Restarting a computer to fix glitches or apply updates", row: 0, col: 8, length: 6 },
+    { number: 4, direction: "across", word: "PIXEL", clue: "The smallest single point of color on a screen", row: 0, col: 10, length: 5 },
+    { number: 5, direction: "down", word: "INTERNET", clue: "Worldwide network connecting millions of computers together", row: 0, col: 11, length: 8 },
+    { number: 6, direction: "across", word: "SERVER", clue: "A central computer that serves web pages or files to clients", row: 1, col: 4, length: 6 },
+    { number: 6, direction: "down", word: "SEARCH", clue: "Typing a query into Google or a browser to find information", row: 1, col: 4, length: 6 },
+    { number: 7, direction: "across", word: "BROWSER", clue: "Software like Chrome or Edge used to view websites", row: 3, col: 6, length: 7 },
+    { number: 8, direction: "across", word: "BINARY", clue: "Number system made up of only 0s and 1s", row: 4, col: 0, length: 6 },
+    { number: 9, direction: "across", word: "BUTTON", clue: "Clickable graphic on a screen that triggers an action", row: 5, col: 6, length: 6 },
+    { number: 10, direction: "down", word: "CLOUD", clue: "Online servers where you store data instead of local hard drives", row: 5, col: 13, length: 5 },
+    { number: 11, direction: "across", word: "PYTHON", clue: "Popular beginner-friendly programming language named after a comedy group", row: 7, col: 9, length: 6 },
+    { number: 11, direction: "down", word: "PASSWORD", clue: "Secret code used to lock and protect your account", row: 7, col: 9, length: 8 },
+    { number: 12, direction: "down", word: "BACKUP", clue: "A duplicate copy of files saved to prevent data loss", row: 8, col: 1, length: 6 },
+    { number: 13, direction: "down", word: "LAPTOP", clue: "A portable computer you can carry and use on your lap", row: 9, col: 5, length: 6 },
+    { number: 14, direction: "across", word: "SYSTEM", clue: "A combination of hardware and software working together", row: 10, col: 7, length: 6 },
+    { number: 15, direction: "down", word: "EMAIL", clue: "Electronic mail sent over the internet", row: 10, col: 11, length: 5 },
+    { number: 16, direction: "across", word: "OUTPUT", clue: "Information displayed or produced by a computer", row: 12, col: 0, length: 6 },
+    { number: 17, direction: "across", word: "DOMAIN", clue: "A website address like google.com or wikipedia.org", row: 12, col: 8, length: 6 },
+    { number: 18, direction: "across", word: "UPLOAD", clue: "Sending a file or photo from your device to the internet", row: 14, col: 4, length: 6 }
   ]
 };
 
@@ -96,7 +96,7 @@ export function useCrosswordGame() {
   const [gridState, setGridState] = useState<string[][]>(() =>
     Array.from({ length: rows }, () => Array(cols).fill(''))
   );
-  const [activeCell, setActiveCell] = useState<CellPosition>({ r: 0, c: 6 });
+  const [activeCell, setActiveCell] = useState<CellPosition>({ r: 0, c: 10 });
   const [activeDirection, setActiveDirection] = useState<Direction>('across');
   const [revealedCells, setRevealedCells] = useState<Set<string>>(() => new Set());
   const [cellStatus, setCellStatus] = useState<Record<string, 'correct' | 'incorrect'>>({});
@@ -459,7 +459,7 @@ export function useCrosswordGame() {
     setTimerSeconds(0);
     setIsCompleted(false);
     setIsTimerRunning(true);
-    setActiveCell({ r: 0, c: 6 });
+    setActiveCell({ r: 0, c: 10 });
     setActiveDirection('across');
     setShowResetModal(false);
     showToast('Puzzle has been reset.');
