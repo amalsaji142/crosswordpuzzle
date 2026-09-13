@@ -1,0 +1,28 @@
+{
+  "name": "bytecross-cs-crossword",
+  "version": "1.0.0",
+  "description": "Computer Science & Technology Crossword Puzzle Game in React TypeScript",
+  "main": "games/index.ts",
+  "scripts": {
+    "test:grid": "python verify_puzzle.py",
+    "test:cli": "python crossword_cli.py --test"
+  },
+  "keywords": [
+    "crossword",
+    "react",
+    "typescript",
+    "computer-science",
+    "game"
+  ],
+  "author": "Amal Saji Thomas",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.0.0"
+  }
+}

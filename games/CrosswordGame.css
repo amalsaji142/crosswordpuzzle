@@ -26,13 +26,7 @@
   --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
+.bytecross-wrapper {
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   background-color: var(--bg-primary);
   color: var(--text-primary);
@@ -40,10 +34,15 @@ body {
   display: flex;
   flex-direction: column;
   line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.bytecross-wrapper * {
+  box-sizing: border-box;
 }
 
 /* Header */
-header {
+.bytecross-header {
   background: linear-gradient(180deg, #162036 0%, #0d1424 100%);
   border-bottom: 1px solid var(--border-color);
   padding: 1rem 1.5rem;
@@ -52,7 +51,7 @@ header {
   z-index: 50;
 }
 
-.header-container {
+.bytecross-header-container {
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
@@ -88,6 +87,7 @@ header {
   background: linear-gradient(90deg, #ffffff, #93c5fd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin: 0;
 }
 
 .badge-group {
@@ -154,7 +154,7 @@ header {
 }
 
 /* Main Container */
-main {
+.bytecross-main {
   flex: 1;
   max-width: 1440px;
   width: 100%;
@@ -342,7 +342,7 @@ main {
   flex-wrap: wrap;
 }
 
-button {
+.bytecross-wrapper button {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -357,34 +357,35 @@ button {
   transition: all 0.15s ease;
 }
 
-button:hover {
+.bytecross-wrapper button:hover {
   background: var(--bg-hover);
   border-color: #475569;
 }
 
-button:active {
+.bytecross-wrapper button:active {
   transform: scale(0.98);
 }
 
-button.btn-primary {
+.bytecross-wrapper button.btn-primary {
   background: linear-gradient(135deg, #0284c7, #2563eb);
   color: white;
   border-color: #38bdf8;
 }
 
-button.btn-primary:hover {
+.bytecross-wrapper button.btn-primary:hover {
   background: linear-gradient(135deg, #0369a1, #1d4ed8);
 }
 
-button.btn-outline {
+.bytecross-wrapper button.btn-outline {
   background: transparent;
 }
 
-button.btn-outline:hover {
+.bytecross-wrapper button.btn-outline:hover {
   background: rgba(255, 255, 255, 0.05);
 }
 
-button:disabled, button.disabled {
+.bytecross-wrapper button:disabled, 
+.bytecross-wrapper button.disabled {
   opacity: 0.45 !important;
   cursor: not-allowed !important;
   pointer-events: none;
@@ -403,7 +404,7 @@ button:disabled, button.disabled {
   letter-spacing: 0.02em;
 }
 
-button:disabled .hint-badge, button.disabled .hint-badge {
+.bytecross-wrapper button:disabled .hint-badge {
   background: rgba(239, 68, 68, 0.15);
   color: #f87171;
   border-color: rgba(239, 68, 68, 0.3);
@@ -436,6 +437,7 @@ button:disabled .hint-badge, button.disabled .hint-badge {
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--text-primary);
+  margin: 0;
 }
 
 .clue-columns {
@@ -446,7 +448,6 @@ button:disabled .hint-badge, button.disabled .hint-badge {
   padding-right: 0.5rem;
 }
 
-/* Custom Scrollbar */
 .clue-columns::-webkit-scrollbar {
   width: 6px;
 }
@@ -479,6 +480,8 @@ button:disabled .hint-badge, button.disabled .hint-badge {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  padding: 0;
+  margin: 0;
 }
 
 .clue-item {
@@ -550,14 +553,10 @@ button:disabled .hint-badge, button.disabled .hint-badge {
   inset: 0;
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(4px);
-  display: none;
+  display: grid;
   place-items: center;
   z-index: 100;
   padding: 1.5rem;
-}
-
-.modal-overlay.open {
-  display: grid;
 }
 
 .modal-card {
@@ -623,7 +622,6 @@ button:disabled .hint-badge, button.disabled .hint-badge {
   justify-content: center;
 }
 
-/* Keyboard Help List */
 .help-list {
   text-align: left;
   margin-bottom: 1.5rem;
@@ -652,7 +650,7 @@ kbd {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* Notification Toast */
+/* Toast */
 .toast {
   position: fixed;
   bottom: 2rem;
@@ -667,57 +665,23 @@ kbd {
   font-size: 0.9rem;
   font-weight: 600;
   z-index: 999;
-  transform: translateY(100px);
-  opacity: 0;
   transition: all 0.25s ease;
 }
 
-.toast.show {
-  transform: translateY(0);
-  opacity: 1;
+.print-header {
+  display: none;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1100px) {
-  main {
-    grid-template-columns: 1fr;
-  }
-  .clues-section {
-    position: static;
-    max-height: 500px;
-  }
-}
-
-@media (max-width: 640px) {
-  header {
-    padding: 0.75rem 1rem;
-  }
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  main {
-    padding: 0.75rem;
-    gap: 1rem;
-  }
-  .clue-columns {
-    grid-template-columns: 1fr;
-  }
-  .toolbar {
-    justify-content: center;
-  }
-}
-
-/* PRINT MEDIA STYLESHEET */
+/* Print Styles */
 @media print {
-  body {
+  .bytecross-wrapper {
     background: white !important;
     color: black !important;
   }
-  header, .toolbar, .active-clue-bar, .modal-overlay, .toast, .btn-group {
+  .bytecross-header, .toolbar, .active-clue-bar, .modal-overlay, .toast, .btn-group {
     display: none !important;
   }
-  main {
+  .bytecross-main {
     display: block !important;
     padding: 0 !important;
     max-width: 100% !important;
@@ -730,6 +694,7 @@ kbd {
   .print-header h1 {
     font-size: 1.8rem;
     margin-bottom: 0.3rem;
+    color: black !important;
   }
   .board-container {
     background: transparent !important;
@@ -757,11 +722,7 @@ kbd {
     font-size: 0.55rem !important;
   }
   .cell-letter {
-    display: none !important; /* blank grid for solving */
-  }
-  body.print-solution .cell-letter {
-    display: block !important;
-    color: black !important;
+    display: none !important;
   }
   .clues-section {
     background: transparent !important;
@@ -799,6 +760,32 @@ kbd {
   }
 }
 
-.print-header {
-  display: none;
+@media (max-width: 1100px) {
+  .bytecross-main {
+    grid-template-columns: 1fr;
+  }
+  .clues-section {
+    position: static;
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 640px) {
+  .bytecross-header {
+    padding: 0.75rem 1rem;
+  }
+  .bytecross-header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .bytecross-main {
+    padding: 0.75rem;
+    gap: 1rem;
+  }
+  .clue-columns {
+    grid-template-columns: 1fr;
+  }
+  .toolbar {
+    justify-content: center;
+  }
 }

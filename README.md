@@ -6,28 +6,52 @@ A fully organized, authentic crossword puzzle game themed around **Computer Scie
 
 ## 🎮 How to Play
 
-You can play this game in two ways:
-1. **Interactive Web App** (Recommended) — Rich UI with real-time feedback, keyboard navigation, timer, progress tracker, and print mode.
+You can use this game in two ways:
+1. **React TypeScript Component (`.tsx`)** (Recommended) — Drop `<CrosswordGame />` directly into your React / Next.js / Vite application with full state management in `games/logic.tsx`.
 2. **Terminal CLI Game** — Text-based puzzle solver directly in your command line.
 
 ---
 
-### Option 1: Play the Interactive Web Game
+### Option 1: Use in React / TypeScript Application
 
-#### Quick Start (Zero Setup)
-Simply open [`index.html`](file:///C:/Users/thoma/.gemini/antigravity/scratch/cs-crossword-puzzle/index.html) directly in any web browser (Chrome, Edge, Firefox, Safari). No web server or installation required!
+The game is modularized inside the [`games/`](file:///C:/Users/thoma/.gemini/antigravity/scratch/cs-crossword-puzzle/games/) folder:
+- **`games/logic.tsx`**: Contains all game logic, state management hook `useCrosswordGame()`, strict hint quotas (3 letter hints & 2 word hints), cell calculations, timer, and validation.
+- **`games/CrosswordGame.tsx`**: Full interactive TSX component with keyboard navigation, active word highlights, modal popups, and print layout.
+- **`games/CrosswordGame.css`**: Complete responsive dark tech theme & print media stylesheet.
 
-```powershell
-# In PowerShell:
-Start-Process "C:\Users\thoma\.gemini\antigravity\scratch\cs-crossword-puzzle\index.html"
+#### Example Usage:
+```tsx
+import React from 'react';
+import { CrosswordGame } from './games';
+
+export default function App() {
+  return (
+    <main>
+      <CrosswordGame />
+    </main>
+  );
+}
 ```
 
-#### Alternatively with Python Local Server:
-```bash
-cd C:\Users\thoma\.gemini\antigravity\scratch\cs-crossword-puzzle
-python -m http.server 8080
+Or consume the logic hook separately for custom UI:
+```tsx
+import { useCrosswordGame } from './games/logic';
+
+export function CustomCrossword() {
+  const {
+    gridState,
+    activeCell,
+    activeWord,
+    letterHintsRemaining,
+    wordHintsRemaining,
+    handleCellClick,
+    checkCurrentWord,
+    revealCurrentLetter
+  } = useCrosswordGame();
+
+  // Render custom UI using the hook
+}
 ```
-Then visit `http://localhost:8080` in your browser.
 
 #### Controls & Shortcuts
 | Action | Key / Gesture |
@@ -112,13 +136,17 @@ Want to use this as a physical handout or test for students / friends?
 
 ```
 cs-crossword-puzzle/
-├── index.html          # Interactive single-page web app
-├── style.css           # Styling, dark tech theme, responsiveness, @media print
-├── app.js              # Game logic, state manager, keyboard navigation, timer
-├── puzzle_data.json    # Verified 15x15 layout, words, clues, and coordinates
-├── crossword_cli.py    # Python terminal CLI edition
-├── verify_puzzle.py    # Automated test script checking grid integrity
-└── README.md           # Documentation, gameplay guide, and answer key
+├── games/
+│   ├── logic.tsx           # Complete game logic, hooks, state, hint quotas & types
+│   ├── CrosswordGame.tsx   # Interactive React TypeScript crossword component
+│   ├── CrosswordGame.css   # Dark tech theme, grid layout & print styling
+│   └── index.ts            # Barrel export for easy imports
+├── package.json            # Package manifest with React dependencies
+├── tsconfig.json           # TypeScript configuration
+├── puzzle_data.json        # Verified 15x15 layout, words, clues, and coordinates
+├── crossword_cli.py        # Python terminal CLI edition
+├── verify_puzzle.py        # Automated test script checking grid integrity
+└── README.md               # Documentation, gameplay guide, and answer key
 ```
 
 ---
